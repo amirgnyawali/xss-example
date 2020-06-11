@@ -31,10 +31,9 @@ def home():
 <div class="message">
 {}
 </div>
-""".format(m.content)
+""".format(m.content.replace('<','&lt;').replace('>','&gt;'))
 
-    return body 
-
+    return body
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6738))
